@@ -6,7 +6,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+
+    /* Imagem de fundo */
+    background-image: url("../images/giphy\ gg.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     height: 100vh;
     display: flex;
     align-items: center;
