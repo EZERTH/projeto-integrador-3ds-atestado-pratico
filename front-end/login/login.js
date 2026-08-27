@@ -18,6 +18,7 @@ form.addEventListener('submit', async (event) => {
         const dados = await resposta.json();
 
         if (dados.sucesso) {
+            localStorage.setItem('usuarioLogado', JSON.stringify(dados.usuario));
             alert(`Bem-vindo, ${dados.usuario.nome}!`);
             window.location.href = '../home/home.html';
         } else {
