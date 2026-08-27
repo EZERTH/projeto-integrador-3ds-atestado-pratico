@@ -1,0 +1,91 @@
+<<<<<<< HEAD
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.barraazul-container {
+    background-color: #2563eb;
+    padding: 15px 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h1-2 {
+    font-size: 20px;
+    color: aliceblue;
+}
+.conteudo-container {
+    padding: 30px;
+}
+
+#btnSair {
+    padding: 8px 16px;
+    background-color: white;
+    color: #2563eb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnSair:hover {
+    background-color: #e5e7eb;
+}
+
+.resumo-faltas {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.resumo-faltas h2 {
+    font-size: 28px;
+}
+
+.lista-faltas {
+    margin-top: 30px;
+    background-color: #e5e7eb;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.lista-faltas ul {
+    list-style: none;
+}
+
+.lista-faltas li {
+    padding: 6px 0;
+}
+
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.usuario-info p {
+    color: aliceblue;
+    font-size: 14px;
+}
+>>>>>>> de1d79e9787321a440ca12d063d919fc444f4220

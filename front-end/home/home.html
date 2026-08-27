@@ -6,8 +6,31 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-   <div class="barraazul-container">
-     <h1 class="h1-2">Faltas e Justificativas</h1>
-   </div>
+  <div class="barraazul-container">
+    <h1 class="h1-2">Faltas e Justificativas</h1>
+    <div class="usuario-info">
+        <p id="boasVindas">Carregando...</p>
+        <button id="btnSair">Sair</button>
+    </div>
+  </div>
+
+  <div class="conteudo-container">
+      <div class="resumo-faltas">
+          <div>
+              <p>Total de faltas:</p>
+              <h2 id="totalFaltas">-</h2>
+          </div>
+          <div>
+              <p>Justificadas:</p>
+              <h2 id="totalJustificadas">-</h2>
+          </div>
+      </div>
+
+      <div class="lista-faltas">
+          <h3>Dias</h3>
+          <ul id="listaFaltas"></ul>
+      </div>
+  </div>
+
+  <script src="home.js"></script>
 </body>
-</html>

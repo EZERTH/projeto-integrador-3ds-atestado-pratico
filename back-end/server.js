@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { usuarios } = require('./mockDatabase');
+const { usuarios, faltas } = require('./mockDatabase');
 const app = express();
 const PORT = 3000;
 
@@ -13,6 +13,14 @@ app.get('/', (req, res) => {
 
 app.get('/users', (req, res) => {
     res.json(usuarios);
+    
+});
+app.get('/faltas/:alunoId', (req, res) => {
+    const alunoId = parseInt(req.params.alunoId);
+
+    const faltasDoAluno = faltas.filter((falta) => falta.alunoId === alunoId);
+
+    res.json(faltasDoAluno);
 });
 
 app.post('/login', (req, res) => {
