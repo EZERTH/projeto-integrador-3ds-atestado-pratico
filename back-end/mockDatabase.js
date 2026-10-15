@@ -36,5 +36,5 @@ const faltas = [
     { id: 4, alunoId: 2, data: "2026-08-05", status: "justificada" },
     { id: 5, alunoId: 3, data: "2026-08-07", status: "não justificada" }
 ];
-
-module.exports = { usuarios, faltas };
+const atestados = [];
+module.exports = { usuarios, faltas, atestados };

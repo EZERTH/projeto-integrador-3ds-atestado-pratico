@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { usuarios, faltas } = require('./mockDatabase');
+const { usuarios, faltas, atestados } = require('./mockDatabase');
 const app = express();
 const PORT = 3000;
 
@@ -36,7 +36,21 @@ app.post('/login', (req, res) => {
         res.status(401).json({ sucesso: false, mensagem: "E-mail ou senha incorretos." });
     }
 });
+app.post('/atestados', (req, res) => {
+    const { alunoId, motivo, data } = req.body;
 
+    const novoAtestado = {
+        id: atestados.length + 1,
+        alunoId,
+        motivo,
+        data,
+        status: "pendente"
+    };
+
+    atestados.push(novoAtestado);
+
+    res.json({ sucesso: true, atestado: novoAtestado });
+});
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
