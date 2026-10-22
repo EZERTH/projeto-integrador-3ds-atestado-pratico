@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-=======
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
     height: 100vh;
@@ -14,7 +12,7 @@ body {
     flex-direction: column;
 }
 
-input {
+.input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -88,4 +86,3 @@ input {
     color: aliceblue;
     font-size: 14px;
 }
->>>>>>> de1d79e9787321a440ca12d063d919fc444f4220

@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Sistema de Atestados</title>
     <link rel="stylesheet" href="style2.css">
 </head>
@@ -15,6 +16,36 @@
   </div>
 
   <div class="conteudo-container">
+    <!-- Área exclusiva da secretaria -->
+<div id="areaSecretaria" style="display: none;">
+
+    <h2>Painel da Secretaria</h2>
+
+    <div class="resumo-faltas">
+        <div>
+            <p>Total de alunos:</p>
+            <h2 id="totalAlunos">0</h2>
+        </div>
+
+        <div>
+            <p>Atestados pendentes:</p>
+            <h2 id="totalPendentes">0</h2>
+        </div>
+    </div>
+
+    <div class="lista-faltas">
+        <h3>Alunos cadastrados</h3>
+        <ul id="listaAlunos"></ul>
+    </div>
+
+    <div class="lista-faltas">
+        <h3>Atestados recebidos</h3>
+        <ul id="listaAtestados"></ul>
+    </div>
+
+</div>
+
+<div id="areaAluno"></div>
       <div class="resumo-faltas">
           <div>
               <p>Total de faltas:</p>
@@ -30,7 +61,22 @@
           <h3>Dias</h3>
           <ul id="listaFaltas"></ul>
       </div>
+
+      <div class="enviar-atestado">
+          <h3>Enviar atestado</h3>
+          <form id="formAtestado">
+              <label for="motivo">Motivo</label>
+              <input type="text" id="motivo" name="motivo" required>
+
+              <label for="dataFalta">Data da falta</label>
+              <input type="date" id="dataFalta" name="dataFalta" required>
+
+              <button type="submit">Enviar</button>
+          </form>
+      </div>
   </div>
+</div>
 
   <script src="home.js"></script>
 </body>
+</html>

@@ -12,9 +12,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-    res.json(usuarios);
-    
+    const usuariosPublicos = usuarios.map((usuario) => ({
+        id: usuario.id,
+        nome: usuario.nome,
+        email: usuario.email,
+        tipo: usuario.tipo
+    }));
+
+    res.json(usuariosPublicos);
 });
+    
 app.get('/faltas/:alunoId', (req, res) => {
     const alunoId = parseInt(req.params.alunoId);
 
@@ -51,6 +58,11 @@ app.post('/atestados', (req, res) => {
 
     res.json({ sucesso: true, atestado: novoAtestado });
 });
+
+app.get('/atestados', (req, res) => {
+    res.json(atestados);
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
